@@ -24,7 +24,7 @@ public class DesertIsland {
 
 
         peoplesInput();
-        savedAnswers();
+
 
 
     }
@@ -60,9 +60,7 @@ public class DesertIsland {
             }
 
         }
-        int[] arrayOfAnswers = new int[10];
 
-        }
 
     }
 
