@@ -1,4 +1,6 @@
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class DesertIsland {
@@ -21,7 +23,7 @@ public class DesertIsland {
 
         System.out.println("please input your answers below");
 
-        System.out.println();
+
 
         int[] userInputs = new int[10];
 
@@ -31,8 +33,8 @@ public class DesertIsland {
             System.out.println(element);
         }
 
-
-        System.out.println("the most popular choice is "  );
+        System.out.println();
+        System.out.println("the most popular choice is " + max(userInputs2));
 
     }
 
@@ -85,4 +87,13 @@ public class DesertIsland {
         return array;
     }
 
+    public static int max(int[] choice) {
+        int maximum = choice[0];
+        for (int i = 0; i < choice.length; i++) {
+            if (choice[i] > maximum) {
+                maximum = choice[i];
+
+            }
+        }return maximum;
+    }
 }
