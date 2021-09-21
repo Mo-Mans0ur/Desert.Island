@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class DesertIsland {
@@ -18,50 +19,70 @@ public class DesertIsland {
 
         System.out.println();
 
-        System.out.println("please input your answer below");
+        System.out.println("please input your answers below");
 
         System.out.println();
 
+        int[] userInputs = new int[10];
 
-        peoplesInput();
+        int[] userInputs2 = peoplesInput(userInputs);
+
+        for (int element: userInputs2){
+            System.out.println(element);
+        }
 
 
+        System.out.println("the most popular choice is "  );
 
     }
 
-    public static void peoplesInput() {
+    public static int[] peoplesInput(int[] array) {
         Scanner scanner = new Scanner(System.in);
+
         for (int i = 1; i <= 10; i++) {
 
 
             int userChoice = scanner.nextInt();
+
             if (userChoice == 1) {
                 System.out.println("you chose a knife ");
+                array[0]++;
             } else if (userChoice == 2) {
-                System.out.println("you chose a survival knife ");
+                System.out.println("you chose a survival book ");
+                array[1]++;
             } else if (userChoice == 3) {
                 System.out.println("you chose a fire starting kit ");
+                array[2]++;
             } else if (userChoice == 4) {
                 System.out.println("you chose a cellphone ");
+                array[3]++;
             } else if (userChoice == 5) {
                 System.out.println("you chose a gps ");
+                array[4]++;
             } else if (userChoice == 6) {
                 System.out.println("you chose a boat ");
+                array[5]++;
             } else if (userChoice == 7) {
                 System.out.println("you chose clothes ");
+                array[6]++;
             } else if (userChoice == 8) {
                 System.out.println("you chose an guitar ");
+                array[7]++;
             } else if (userChoice == 9) {
                 System.out.println("you chose pencil and paper ");
+                array[8]++;
             } else if (userChoice == 10) {
                 System.out.println("you chose a hammock");
+                array[9]++;
             }else {
                 System.out.println("you can only choose from 1 to 10");
             }
+            System.out.println();
 
         }
 
 
+        return array;
     }
 
 }
